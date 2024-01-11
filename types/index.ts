@@ -16,11 +16,16 @@ interface IDD {
   suffixes: Array<string>;
 }
 
+interface Flag {
+  png: string;
+  alt: string;
+}
+
 export interface ICountriesResponse {
   id: string;
-  flags: {
-    png: string;
-  };
+  flags: Partial<Flag>;
+  capital?: string;
+  region?: Array<string>;
   name: Name;
   altSpellings: Array<string>;
   idd: IDD;
